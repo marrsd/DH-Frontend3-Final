@@ -1,0 +1,7 @@
+.navbarContainer {
+    display: flex
+}
+
+.navbarContainer a {
+    margin-right: 20px;
+}
