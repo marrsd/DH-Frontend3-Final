@@ -1,21 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+
 import DentistsRoutes from './routes/DentistsRoutes'
 import Navbar from './components/Navbar'
-import { DentistContext } from './context/DentistContext'
+import DentistProvider from './context/DentistContext'
 
 function App() {
   
   return (
-    <DentistContext>
-      <Navbar/>
-      <br />
+    <DentistProvider>
+      <header>
+        <Navbar/>
+      </header>
+      <main>
       <DentistsRoutes/>
-      <br />
+      </main>      
       <footer>Footer</footer>
-    </DentistContext>
+    </DentistProvider>
   )
 }
 
