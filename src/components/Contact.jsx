@@ -2,11 +2,11 @@ import { useState } from "react"
 
 import styles from '../styles/Contact.module.css'
 
-export default function Contacto() {
+export default function Contact() {
 
     const [ name, setName ] = useState('')
     const [ email, setEmail ] = useState('')
-    const [ error, setError ] = useState('')
+    const [ message, setMessage ] = useState('')
 
     const handleEmail = (e) => {
         setEmail(e.target.value)
@@ -17,10 +17,17 @@ export default function Contacto() {
     }
     
     const handleSubmit = (e) => {
+        name.trim()
+        email.trim()
+
         e.preventDefault()
 
-        //Validacion email - PREGUNTAR
-        name.length > 5 ? console.log("Nombre validado") : console.log("error")
+        name.length > 5 && email.length > 0 ? 
+            setMessage(`Gracias ${name}, te contactaremos cuando antes vía mail`) : 
+            setMessage("Por favor verifique su información nuevamente")
+
+        setName("")
+        setEmail("")
     }
 
     return(
@@ -47,6 +54,7 @@ export default function Contacto() {
                 </div>                
                 
             </form>
+            { message ? <p> { message } </p> : null }
         </>
     )
 }
