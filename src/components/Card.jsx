@@ -10,15 +10,17 @@ export default function Card (props){
 
     const { theme } = useContext(ThemeContext)
 
+    // className = { theme === "dark" ? style.darkModeCard + " " + style.card : style.card }
+
     return (
-        <div key={props.id} className = { theme === "dark" ? style.darkModeCard + " " + style.card : style.card }>
+        <div key={props.id} className={style.card}>
             
             <Link to={`/dentist/${props.id}`}>
                 <img src={profile} alt="dentist image" className={style.profile}/>
             </Link>
 
             <h3 className={style.name}>{props.name}</h3>
-            <p className={style.username}>{props.username}</p>
+            <p className={style.userName}>{props.userName}</p>
 
             <button onClick={props.clickAgregar} className={ style.btnFavorites}>
                 Agregar a Destacados

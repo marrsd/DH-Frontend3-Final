@@ -1,5 +1,5 @@
 .card {
-    background-color: white;
+    border: 2px solid rgb(179, 179, 179);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     margin: 20px;
@@ -9,15 +9,11 @@
     width: 230px;
 }
 
-.darkModeCard {
-    background-color: rgb(153, 152, 152);
-}
-
 .name {
     margin-bottom: 7px;
 }
 
-.username {
+.userName {
     margin: 0 0 25px 0;
 }
 

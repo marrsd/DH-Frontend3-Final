@@ -10,13 +10,14 @@ export default function Navbar() {
 
     const { theme, changeTheme } = useContext(ThemeContext);
 
+    const styleTheme = theme === "dark" ? stylesGlobal.dark : stylesGlobal.light;
 
     return(
         <div className={ styles.navbarContainer }>
             <div>
-                <Link to="/" className = { theme === "dark" ? stylesGlobal.dark : stylesGlobal.ligh }>Home</Link>
-                <Link to="/contact" className = { theme === "dark" ? stylesGlobal.dark : stylesGlobal.ligh }>Contacto</Link>
-                <Link to="/favs" className = { theme === "dark" ? stylesGlobal.dark : stylesGlobal.ligh }>Destacados</Link>
+                <Link to="/" className = { styleTheme }>Home</Link>
+                <Link to="/contact" className = { styleTheme } >Contacto</Link>
+                <Link to="/favs" className = { styleTheme } >Destacados</Link>
             </div>
             <button onClick={changeTheme}>
                 <img src={iconTheme} alt="theme icon" className={ styles.themeImg }/>

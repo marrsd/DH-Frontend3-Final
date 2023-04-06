@@ -24,7 +24,7 @@ export default function Home() {
                             key = {dentist.id} 
                             id = {dentist.id} 
                             name = {dentist.name}
-                            username = {dentist.username}
+                            userName = {dentist.username}
                             clickAgregar = {agregarDestacados}
                         />
                     ))

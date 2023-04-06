@@ -1,5 +1,7 @@
 import { createContext, useState } from "react";
 
+import styles from '../styles/GlobalTheme.module.css'
+
 
 export const ThemeContext = createContext();
 
@@ -20,7 +22,9 @@ export default function ThemeContextProvider(props){
 
     return(
         <ThemeContext.Provider value = {value}>
-            {props.children}
+            <div className = { theme === "dark" ? styles.dark : styles.light }>
+                {props.children}
+            </div>
         </ThemeContext.Provider>
     )
 }
