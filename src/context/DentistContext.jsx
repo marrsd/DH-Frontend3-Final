@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react"
-import styles from '../styles/GlobalTheme.module.css'
 import { ThemeContext } from "./ThemeContext";
 
+import styles from '../styles/GlobalTheme.module.css'
 
 export const DentistContext = createContext()
 

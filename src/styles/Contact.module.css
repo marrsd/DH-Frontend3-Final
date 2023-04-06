@@ -8,7 +8,6 @@
     flex-direction: column;
     width: 50%;
     padding: 40px;
-    background-color: rgb(235, 235, 235);
 }
 
 .formContainer label{
@@ -26,4 +25,10 @@
     border: none;
     padding: 8px;
     color: white
+}
+
+.formContainer .darkModeContact {
+    width: 50%;
+    margin: auto;
+    background-color: rgb(153, 152, 152);
 }

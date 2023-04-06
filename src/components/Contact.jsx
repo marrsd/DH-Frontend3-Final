@@ -1,8 +1,12 @@
 import { useState } from "react"
+import { ThemeContext } from "../context/ThemeContext"
+import { useContext } from "react"
 
 import styles from '../styles/Contact.module.css'
 
 export default function Contact() {
+
+    const { theme } = useContext(ThemeContext)
 
     const [ name, setName ] = useState('')
     const [ email, setEmail ] = useState('')
@@ -33,7 +37,7 @@ export default function Contact() {
     return(
         <>
             <h1>Contacto</h1>
-            <form onSubmit={ handleSubmit } className={ styles.form }>
+            <form onSubmit={ handleSubmit } className = { theme === "dark" ? styles.darkModeContact + " " + styles.form : styles.form }>
                 <div className={ styles.formContainer}>
                     <label>Fullname</label>
                     <input 

@@ -1,9 +1,13 @@
 .dark{
     background-color: grey;
-    color: antiquewhite;
+    color: white;
 }
 
 .light{
-    background-color: white;
+    background-color: #eeeeee;
     color: black;
+}
+
+.darkModeCard {
+    background-color: rgb(153, 152, 152);
 }

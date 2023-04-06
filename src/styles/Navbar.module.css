@@ -1,8 +1,30 @@
 .navbarContainer {
-    display: flex
+    border-bottom: 2px solid #e4e4e4;
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    padding: 20px;
+
 }
 
 .navbarContainer a {
-    margin-right: 20px;
+    padding: 10px 20px;
+    outline: none;
+    text-decoration: none;
+}
+
+.navbarContainer a:focus {
+    transition: 0.5s ease;
+    padding: 10x 20px;
+    background-color: #82c0cc;
+}
+
+.navbarContainer button {
+    border: none;
+    background-color: transparent;
+}
+
+.themeImg {
+    width: 30px;
 }
 

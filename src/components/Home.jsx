@@ -2,6 +2,8 @@ import { useContext } from "react"
 import { DentistContext } from "../context/DentistContext"
 import Card from "./Card";
 
+import style from '../styles/Home.module.css'
+
 export default function Home() {
     const { dentists } = useContext(DentistContext)
     
@@ -15,16 +17,19 @@ export default function Home() {
     return(
         <>
             <h1>Home</h1>
-            {
-                dentists.map( dentist => (
-                    <Card 
-                    key = {dentist.id} 
-                    id = {dentist.id} 
-                    name = {dentist.name}
-                    clickAgregar = {agregarDestacados}
-                    />
-                ))
-            }
+            <div className={ style.container }>
+                {
+                    dentists.map( dentist => (
+                        <Card 
+                            key = {dentist.id} 
+                            id = {dentist.id} 
+                            name = {dentist.name}
+                            username = {dentist.username}
+                            clickAgregar = {agregarDestacados}
+                        />
+                    ))
+                }
+            </div>
         </>
     )
 }
