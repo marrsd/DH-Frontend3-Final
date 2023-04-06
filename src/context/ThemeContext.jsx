@@ -9,6 +9,7 @@ export default function ThemeContextProvider(props){
 
     function changeTheme (){
         setTheme(theme === "light"? "dark": "light")
+        console.log("cambio tema");
     }
 
     const value = {

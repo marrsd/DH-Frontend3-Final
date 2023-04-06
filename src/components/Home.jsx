@@ -18,6 +18,7 @@ export default function Home() {
             {
                 dentists.map( dentist => (
                     <Card 
+                    key = {dentist.id} 
                     id = {dentist.id} 
                     name = {dentist.name}
                     clickAgregar = {agregarDestacados}
