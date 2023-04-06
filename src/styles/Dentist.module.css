@@ -1,0 +1,19 @@
+.textAlignCenter {
+    text-align: center;
+}
+
+.infoContainer {
+    display: flex;
+    justify-content: center;
+    border: solid 1px #bebebe;
+    border-radius: 20px;
+    margin: 80px auto;
+    padding: 20px;
+    width: 55%;
+}
+
+.infoCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

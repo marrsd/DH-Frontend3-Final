@@ -16,7 +16,7 @@ export default function Home() {
 
     return(
         <>
-            <h1>Home</h1>
+            <h1 className={ style.textAlignCenter }>Home</h1>
             <div className={ style.container }>
                 {
                     dentists.map( dentist => (

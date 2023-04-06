@@ -8,20 +8,20 @@
 }
 
 .navbarContainer a {
-    padding: 10px 20px;
     outline: none;
+    padding: 10px 20px;   
     text-decoration: none;
 }
 
 .navbarContainer a:focus {
-    transition: 0.5s ease;
-    padding: 10x 20px;
     background-color: #82c0cc;
+    transition: 0.5s ease;
+    padding: 10x 20px;    
 }
 
 .navbarContainer button {
-    border: none;
     background-color: transparent;
+    border: none;
 }
 
 .themeImg {

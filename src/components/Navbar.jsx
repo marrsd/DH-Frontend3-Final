@@ -3,7 +3,8 @@ import { useContext } from "react"
 import {ThemeContext} from "../context/ThemeContext"
 
 import styles from '../styles/Navbar.module.css'
-import style from '../styles/GlobalTheme.module.css'
+import stylesGlobal from '../styles/GlobalTheme.module.css'
+import iconTheme from '../assets/dark_theme.png';
 
 export default function Navbar() {
 
@@ -13,12 +14,12 @@ export default function Navbar() {
     return(
         <div className={ styles.navbarContainer }>
             <div>
-                <Link to="/" className = { theme === "dark" ? style.dark : style.ligh }>Home</Link>
-                <Link to="/contact" className = { theme === "dark" ? style.dark : style.ligh }>Contacto</Link>
-                <Link to="/favs" className = { theme === "dark" ? style.dark : style.ligh }>Destacados</Link>
+                <Link to="/" className = { theme === "dark" ? stylesGlobal.dark : stylesGlobal.ligh }>Home</Link>
+                <Link to="/contact" className = { theme === "dark" ? stylesGlobal.dark : stylesGlobal.ligh }>Contacto</Link>
+                <Link to="/favs" className = { theme === "dark" ? stylesGlobal.dark : stylesGlobal.ligh }>Destacados</Link>
             </div>
-            <button onClick={changeTheme} >
-                <img src="src\assets\dark_theme.png" alt="no load" className={ styles.themeImg }/>
+            <button onClick={changeTheme}>
+                <img src={iconTheme} alt="theme icon" className={ styles.themeImg }/>
             </button>
         </div>
     )

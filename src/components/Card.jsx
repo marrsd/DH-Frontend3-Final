@@ -3,6 +3,8 @@ import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 
 import style from '../styles/Card.module.css'
+import profile from '../assets/profile.png'
+import star from '../assets/star.png'
 
 export default function Card (props){
 
@@ -12,13 +14,16 @@ export default function Card (props){
         <div key={props.id} className = { theme === "dark" ? style.darkModeCard + " " + style.card : style.card }>
             
             <Link to={`/dentist/${props.id}`}>
-                <img src="src\assets\dentist.jpg" alt="dentist image" />
+                <img src={profile} alt="dentist image" className={style.profile}/>
             </Link>
 
-            <h3>{props.name}</h3>
+            <h3 className={style.name}>{props.name}</h3>
             <p className={style.username}>{props.username}</p>
 
-            <button onClick={props.clickAgregar}>Agregar a Destacados</button>
+            <button onClick={props.clickAgregar} className={ style.btnFavorites}>
+                Agregar a Destacados
+                <img src={ star } alt="star icon" className={style.star}/>
+            </button>
         </div>
     )
 }

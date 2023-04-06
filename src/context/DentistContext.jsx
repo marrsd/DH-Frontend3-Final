@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react"
 import { ThemeContext } from "./ThemeContext";
 
 import styles from '../styles/GlobalTheme.module.css'
+import styleContext from '../styles/DentistContext.module.css'
 
 export const DentistContext = createContext()
 
@@ -31,7 +32,7 @@ export default function DentistProvider(props) {
     return(
       
         <DentistContext.Provider value={value}>
-            <div className = { theme === "dark" ? styles.dark : styles.ligh }>
+            <div className = { theme === "dark" ? styles.dark +" " + styleContext.container : styles.ligh +" " + styleContext.container }>
                 {props.children}
             </div>
         </DentistContext.Provider>

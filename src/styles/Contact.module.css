@@ -1,34 +1,51 @@
-.form {
+.textAlignCenter{
+    text-align: center;
+}
+
+.contactContainer {
     display: flex;
     justify-content: center;
 }
 
-.formContainer {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    padding: 40px;
+.form {
+    width: 40%;
 }
 
-.formContainer label{
-    margin: 15px 15px;
+.formContainer {
+    background-color: white;
+    display: flex;
+    flex-direction: column;    
+    padding: 39px;
 }
 
 .formContainer input {
-    margin: 0px 15px;
-    padding: 8px
+    background-color: transparent;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    height: 30px;
+    margin: 10px 0 30px 0px;
+    outline: none;
+    padding: 0 10px
 }
 
-.formContainer button {
-    margin-top: 20px;
-    background-color: cadetblue;
+.sendBtn { 
+    background-color: #82c0cc;
     border: none;
-    padding: 8px;
-    color: white
+    border-radius: 10px;
+    color: white;
+    margin: auto;
+    padding: 15px;
+    width: 30%;
 }
 
-.formContainer .darkModeContact {
-    width: 50%;
-    margin: auto;
+.contactImg {
+    width: 400px;    
+}
+
+.darkModeCard {
     background-color: rgb(153, 152, 152);
+}
+
+.darkModeCard input::placeholder,  .darkModeCard input {
+    color: white
 }

@@ -17,7 +17,7 @@ function App() {
           <main>
             <DentistsRoutes />
           </main>
-          <footer>Footer</footer>
+          <footer>DH - Frontend 3 * Develop by: Luis Molina - Marcela Peñaranda</footer>
       </DentistProvider>
     </ThemeContextProvider>
 

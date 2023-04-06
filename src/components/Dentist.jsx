@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-export default function Dentists() {
+import style from '../styles/Dentist.module.css'
+import info from '../assets/dentistInfo.png'
+
+export default function Dentist() {
 
     const [ dentist, setDentist ] = useState([])
 
@@ -13,9 +16,7 @@ export default function Dentists() {
         setDentist(response)
     }
 
-
     useEffect(() => {
-
         try {
             getData()
             console.log("detailed dentist data fetched");
@@ -28,13 +29,19 @@ export default function Dentists() {
 
     return(
         <>
-            <h1>{dentist.name}</h1>
-            <ul>
-                <li>{dentist.email}</li>
-                <li>{dentist.phone}</li>
-                <li>{dentist.website}</li>
-            </ul>
-            
+            <div className={ style.infoContainer }>
+                
+                <img src={info} alt="dentinst info detail" />
+                <div className={ style.infoCard }>
+                    <h1 className={ style.textAlignCenter }>{dentist.name}</h1>
+                    <ul>
+                        <li>{dentist.email}</li>
+                        <li>{dentist.phone}</li>
+                        <li>{dentist.website}</li>
+                    </ul>
+                </div>
+                
+            </div>
         </>
     )
 }
