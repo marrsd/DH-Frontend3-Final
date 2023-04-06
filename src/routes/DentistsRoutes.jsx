@@ -11,9 +11,9 @@ export default function DentistsRoutes() {
         <>
             <Routes>
                 <Route path='/' element={<Home/>} />
-                <Route path='/dentists/:id' element={<Dentists/>} />
-                <Route path='/contacto' element={<Contact/>} />
-                <Route path='/destacados' element={<Destacados/>} />
+                <Route path='/dentist/:id' element={<Dentists/>} />
+                <Route path='/contact' element={<Contact/>} />
+                <Route path='/favs' element={<Destacados/>} />
                 <Route path='*' element={<NotFound/>} />
             </Routes>
         

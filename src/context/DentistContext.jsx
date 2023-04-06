@@ -7,7 +7,7 @@ export const DentistContext = createContext()
 
 export default function DentistProvider(props) {
 
-    const {theme}  =useContext(ThemeContext);
+    const { theme } = useContext(ThemeContext);
     const [ dentists, setDentists ] = useState([])
 
     const getData = async() => {
@@ -31,7 +31,7 @@ export default function DentistProvider(props) {
     return(
       
         <DentistContext.Provider value={value}>
-            <div className = {styles.theme}>
+            <div className = { theme === "dark" ? styles.dark : styles.ligh }>
                 {props.children}
             </div>
         </DentistContext.Provider>
