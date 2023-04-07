@@ -26,7 +26,7 @@
 }
 
 .btnFavorites {
-    background-color: #82c0cc;
+    background-color: transparent;
     border: none;
     border-radius: 10px;
     color: white;
@@ -39,9 +39,6 @@
     background-color: white;
     border-radius: 20px;
     padding: 10px;
-    position: absolute;
-    right: -30px;
-    top: -15px;    
     width: 20px;
 }
 

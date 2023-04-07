@@ -8,9 +8,23 @@ export default function Home() {
     const { dentists } = useContext(DentistContext)
     
 
-    function agregarDestacados (id){
+    function agregarDestacado (user){
 
-        console.log("dentista favorito agregado");
+        const usersInStorage = localStorage.getItem('users') || "[]";
+        const usersArray = JSON.parse(usersInStorage);
+
+        const userExists = usersArray.some((u) => u.id === user.id)
+
+        if(!userExists){
+
+            usersArray.push(user);
+            const newUsersArray = JSON.stringify(usersArray);
+            localStorage.setItem('users', newUsersArray);
+
+            console.log("Destacado agregado");
+        }else{
+            console.log("Destacado ya existe!");
+        }
     }
 
 
@@ -25,7 +39,7 @@ export default function Home() {
                             id = {dentist.id} 
                             name = {dentist.name}
                             userName = {dentist.username}
-                            clickAgregar = {agregarDestacados}
+                            toggleDestacado = {() => agregarDestacado(dentist)}
                         />
                     ))
                 }

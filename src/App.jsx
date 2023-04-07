@@ -1,4 +1,5 @@
 import './App.css'
+import style from './styles/GlobalTheme.module.css'
 
 import DentistsRoutes from './routes/DentistsRoutes'
 import Navbar from './components/Navbar'
@@ -17,7 +18,7 @@ function App() {
           <main>
             <DentistsRoutes />
           </main>
-          <footer>DH - Frontend 3 * Developed by: Luis Molina - Marcela Peñaranda</footer>
+          <footer className={style.footer}>DH - Frontend 3 * Developed by: Luis Molina - Marcela Peñaranda</footer>
       </DentistProvider>
     </ThemeContextProvider>
 

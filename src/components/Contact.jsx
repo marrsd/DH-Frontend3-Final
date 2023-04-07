@@ -3,6 +3,7 @@ import { ThemeContext } from "../context/ThemeContext"
 import { useContext } from "react"
 
 import styles from '../styles/Contact.module.css'
+import stylesTheme from '../styles/GlobalTheme.module.css'
 import contactImg from '../assets/dentist.jpg'
 
 export default function Contact() {
@@ -41,7 +42,9 @@ export default function Contact() {
             <div className={ styles.contactContainer}>
             
                 <form onSubmit={ handleSubmit } className = { styles.form }>
-                    <div className = { theme === "dark" ? styles.darkModeCard + " " + styles.formContainer : styles.formContainer}>
+                    <div className = { 
+                        theme === "dark" ? stylesTheme.dark + " " + styles.formContainer : stylesTheme.light + " " + styles.formContainer}>
+                        
                         <label>Fullname</label>
                         <input 
                             type="text" 
