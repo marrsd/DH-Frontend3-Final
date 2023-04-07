@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
+// import { ThemeContext } from "../context/ThemeContext";
 
 import style from '../styles/Card.module.css'
 import profile from '../assets/profile.png'
@@ -8,7 +8,7 @@ import star from '../assets/star.png'
 
 export default function Card (props){
 
-    const { theme } = useContext(ThemeContext)
+    // const { theme } = useContext(ThemeContext)
 
     // className = { theme === "dark" ? style.darkModeCard + " " + style.card : style.card }
 
