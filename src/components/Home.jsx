@@ -1,12 +1,21 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { DentistContext } from "../context/DentistContext"
 import Card from "./Card";
 
 import style from '../styles/Home.module.css'
 
 export default function Home() {
-    const { dentists } = useContext(DentistContext)
     
+    const { dentists, getData } = useContext(DentistContext)
+   
+     useEffect(() => {
+        try {
+            getData()
+            console.log("Data fetched");
+        } catch (error) {
+            console.log("Error fetching data");
+        } 
+    }, [])
 
     function agregarDestacado (user){
 

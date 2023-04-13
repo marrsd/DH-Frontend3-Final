@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react"
+import { createContext, useState } from "react"
 
 import styleContext from '../styles/DentistContext.module.css';
 
@@ -14,17 +14,7 @@ export default function DentistProvider(props) {
         setDentists(response)
     }
 
-    useEffect(() => {
-        try {
-            getData()
-            console.log("Data fetched");
-        } catch (error) {
-            console.log("Error fetching data");
-        } 
-    }, [])
-
-
-    const value = { dentists }
+    const value = { dentists, getData }
 
     return(
       
